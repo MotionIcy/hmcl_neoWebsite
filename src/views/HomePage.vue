@@ -1,16 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import AllDownloadsDialog from '../components/AllDownloadsDialog.vue'
-import PasswordDialog from '../components/PasswordDialog.vue'
 import { useDownload } from '../composables/useDownload'
 
-const {
-  passwordDialog,
-  passwordRequest,
-  quickDownload,
-  closePasswordDialog,
-  openPasswordTarget,
-} = useDownload()
+const { quickDownload } = useDownload()
 const allDownloadsOpen = ref(false)
 </script>
 
@@ -47,13 +40,6 @@ const allDownloadsOpen = ref(false)
     </div>
   </section>
 
-  <PasswordDialog
-    :open="passwordDialog"
-    :url="passwordRequest?.url ?? ''"
-    :label="passwordRequest?.label ?? ''"
-    @close="closePasswordDialog"
-    @confirm="openPasswordTarget"
-  />
   <AllDownloadsDialog :open="allDownloadsOpen" @close="allDownloadsOpen = false" />
 </template>
 

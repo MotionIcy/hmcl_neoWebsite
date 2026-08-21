@@ -8,19 +8,11 @@ import FeatureOnline from './views/sections/FeatureOnline.vue'
 import FeatureCustomize from './views/sections/FeatureCustomize.vue'
 import FeatureCards from './views/FeatureCards.vue'
 import SideNav from './components/SideNav.vue'
-import PasswordDialog from './components/PasswordDialog.vue'
 import { featureCards } from './data/sections'
 import { hexToRgb } from './components/mdui/theme/useColorScheme'
 import { useDownload } from './composables/useDownload'
 
-const {
-  passwordDialog,
-  passwordRequest,
-  initDownloads,
-  quickDownload,
-  closePasswordDialog,
-  openPasswordTarget,
-} = useDownload()
+const { initDownloads, quickDownload } = useDownload()
 
 const DEFAULT_BG = '#f9f9ff'
 const DEFAULT_PRIMARY = '#415f91'
@@ -127,15 +119,6 @@ onUnmounted(() => observer?.disconnect())
   </MduiTopAppBar>
 
   <SideNav />
-
-  <PasswordDialog
-    :open="passwordDialog"
-    :url="passwordRequest?.url ?? ''"
-    :label="passwordRequest?.label ?? ''"
-    @close="closePasswordDialog"
-    @confirm="openPasswordTarget"
-  />
-
 
   <main>
     <HomePage />
