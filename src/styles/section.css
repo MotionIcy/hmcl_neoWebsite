@@ -1,0 +1,80 @@
+/* ===== 全局共享 Section 布局（各功能章节复用） ===== */
+
+/* 章节内部容器：左右两栏布局 */
+.section-shell {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 左/右栏：文字内容 */
+.section-shell__content {
+  flex: 1 1 45%;
+  min-width: 0;
+  text-align: left;
+}
+
+/* 左/右栏：媒体展示 */
+.section-shell__media {
+  flex: 1 1 55%;
+  min-width: 0;
+}
+
+/* 章节标题 */
+.section-shell__title {
+  margin: 0 0 1rem;
+  font-size: var(--mdui-typescale-headline-large-size);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* 章节描述 */
+.section-shell__desc {
+  margin: 0 0 2rem;
+  max-width: 42ch;
+  font-size: var(--mdui-typescale-body-large-size);
+  line-height: 1.7;
+  color: rgb(var(--mdui-color-on-surface-variant));
+}
+
+/* 入场动画：标题/描述上升显现 */
+.is-active .section-shell__title {
+  animation: mdui-rise 0.8s var(--mdui-motion-easing-expo-out) 0.1s both;
+}
+
+.is-active .section-shell__desc {
+  animation: mdui-rise 0.8s var(--mdui-motion-easing-expo-out) 0.2s both;
+}
+
+/* 移动端：单栏堆叠 */
+@media (max-width: 720px) {
+  .section-shell {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
+  }
+
+  .section-shell__content {
+    text-align: center;
+  }
+
+  .section-shell__desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 尊重系统减少动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .is-active .section-shell__title,
+  .is-active .section-shell__desc {
+    animation: none;
+  }
+}

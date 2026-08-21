@@ -1,0 +1,42 @@
+/* ===== 全局共享动画（各 Section 复用，避免重复定义） ===== */
+
+/* 上升显现：文字/内容块入场 */
+@keyframes mdui-rise {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 卡片弹入：列表/网格项入场 */
+@keyframes mdui-card-pop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 幕布揭开 + 缩放聚焦：大图/截图入场 */
+@keyframes mdui-reveal-up {
+  0% {
+    opacity: 0;
+    clip-path: inset(12% 0 100% 0);
+    transform: scale(1.06);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+  }
+}

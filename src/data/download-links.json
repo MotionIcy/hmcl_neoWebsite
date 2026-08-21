@@ -1,0 +1,47 @@
+{
+  "stable": {
+    "version": "3.16.3",
+    "jar": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.16.3.jar",
+      "sha256": "5d02f4d04d9442116354ecfccf679910cca371d00a23cd5d6b16558c20a73dd3"
+    },
+    "exe": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.16.3.exe",
+      "sha256": "adc65a82ed31876bb4c7d5e3335c2399bd698bc350ffbc097ae0c66855b777f6"
+    },
+    "sh": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.16.3.sh",
+      "sha256": "69b532039814e76f2452393c792395be15cf70d406c1accc6eac39564e1e02b1"
+    }
+  },
+  "dev": {
+    "version": "3.17.0.354",
+    "jar": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.17.0.354.jar",
+      "sha256": "4d146c7c699821983050f590d348e945e2d862e6cc725e0e994ce9a4782df078"
+    },
+    "exe": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.17.0.354.exe",
+      "sha256": "c31c8a155dff2e1575668dd6a0373ddc16de4281eff3a2a7c0e91f2f8bca895c"
+    },
+    "sh": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.17.0.354.sh",
+      "sha256": "e01062734da5247385198442e10c58d989c10a39cd917fdefd584293bc915e0b"
+    }
+  },
+  "old": {
+    "version": "3.6.20",
+    "jar": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.6.20.jar",
+      "sha256": "691866221c8501e5a79ad61d87afa05019bde0389f867aa8425314d588aae759"
+    },
+    "exe": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.6.20.exe",
+      "sha256": "f3e65c5d928c8464a9591dfa4ac9075f6f9dbe74fa3e4075ea51b0f71b2612ca"
+    },
+    "sh": {
+      "url": "https://hmcl.glavo.site/download/HMCL-3.6.20.sh",
+      "sha256": "491e11d47c38f3252a80851ecf25c0f84a04c7682be813a264afb54761648226"
+    }
+  }
+}
