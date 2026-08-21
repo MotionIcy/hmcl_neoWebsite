@@ -14,7 +14,7 @@ const activeKey = ref<CustomizeKey>('light')
 const options = [
   { key: 'light' as const, icon: 'wallpaper', label: '背景', desc: '切换启动器背景主题', img: glavoLight },
   { key: 'color' as const, icon: 'palette', label: '配色', desc: '自定义主题主色与强调色', img: glavoColor },
-  { key: 'style' as const, icon: 'style', label: '样式', desc: '圆角、布局与材质风格', img: glavoStyle },
+  { key: 'style' as const, icon: 'style', label: '样式', desc: '修改窗口透明度', img: glavoStyle },
   { key: 'dark' as const, icon: 'dark_mode', label: '暗色', desc: '深色主题，夜间更护眼', img: glavoDark },
 ]
 
